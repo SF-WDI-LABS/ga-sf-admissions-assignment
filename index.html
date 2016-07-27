@@ -21,21 +21,43 @@
 <body>
   <header>
     <h1>A bit about myself...</h1>
-    Look in the console for a hint...
+    Instructions are in the console in the developer tools. To enter it press `option + command + i`.
   </header>
 
-  <section id="content-section">
-    Hello there! My name is <span id="first-name">...</span>
+  <section id="exercise-1">
+    <h3 class="challenge">First Challenge</h3>
+    <div class="content">
+      Hello there! My name is <span id="first-name">...</span>
+    </div>
+
+    <div class="instructions">
+      <!-- details summary hints to come... -->
+    </div>
+    <button class="button-primary" on-click=setName()>Set Name</button>
   </section>
 
-  <section id="instructions-section">
-    
+  <section id="exercise-2">
+    <h3 class="challenge">Second Challenge</h3>
+    <div class="content">
+      My favorite hobby is <span id="hobby">...</span>
+    </div>
+
+    <div class="instructions">
+      
+    </div>
+    <button class="button-primary" on-click=setHobby()>Set Hobby</button>
   </section>
 
+  <section id="exercise-3">
+    <h3 class="challenge">Third Challenge</h3>
+    <div class="content">
+      My favorite website is <span id="website">...</span>
+    </div>
 
-  
-  <section>
-    <button on-click=setName()>Set Name</button>
+    <div class="instructions">
+      
+    </div>
+    <button class="button-primary" on-click=setWebsite()>Set Website</button>
   </section>
 
   <footer></footer>
