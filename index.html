@@ -19,47 +19,61 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
-  <header>
-    <h1>A bit about myself...</h1>
-    Instructions are in the console in the developer tools. To enter it press `option + command + i`.
-  </header>
+  <div id="page-wrapper">
+    <header>
+      <h1>A bit about myself...</h1>
+    </header>
 
-  <section id="exercise-1">
-    <h3 class="challenge">First Challenge</h3>
-    <div class="content">
-      Hello there! My name is <span id="first-name">...</span>
-    </div>
+    <section id="lesson-intro">
+      <h4>By the end of this mini lesson you should be able to...</h4>
+      <ul>
+        <li>Receive user input by using a prompt</li>
+        <li>Select HTML elements in JavaScript</li>
+        <li>Change the inner HTML of elements in JavaScript</li>
+      </ul>
+      <h4></h4>
+    </section>
 
-    <div class="instructions">
-      <!-- details summary hints to come... -->
-    </div>
-    <button class="button-primary" on-click=setName()>Set Name</button>
-  </section>
+    <section id="objective-one">
+      <h4>User Prompts</h4>
+      ...
+    </section>
 
-  <section id="exercise-2">
-    <h3 class="challenge">Second Challenge</h3>
-    <div class="content">
-      My favorite hobby is <span id="hobby">...</span>
-    </div>
+    <section id="objective-two">
+      <h4>Selecting Elements</h4>
+      ...
+    </section>
 
-    <div class="instructions">
-      
-    </div>
-    <button class="button-primary" on-click=setHobby()>Set Hobby</button>
-  </section>
+    <section id="objective-three">
+      <h4>Inner HTML</h4>
+      ...
+    </section> 
 
-  <section id="exercise-3">
-    <h3 class="challenge">Third Challenge</h3>
-    <div class="content">
-      My favorite website is <span id="website">...</span>
-    </div>
+    <section id="exercise-1">
+      <h4 class="challenge">First Challenge</h4>
+      <p>Edit the function `app.setName()` in the file `app.js` such that a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">prompt</a> is given to the user. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">Select the element with id</a> `first-name` and set its <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">inner HTML</a> to the input received from the user.</p>
+      <div class="content">
+        Hello there! My name is <span id="first-name">...</span>
+      </div>
+      <button class="button-primary" on-click=app.setName()>Set Name</button>
+    </section>
 
-    <div class="instructions">
-      
-    </div>
-    <button class="button-primary" on-click=setWebsite()>Set Website</button>
-  </section>
+    <section id="exercise-2">
+      <h4 class="challenge">Second Challenge</h4>
+      <div class="content">
+        My favorite hobby is <span id="hobby">...</span>
+      </div>
+      <button class="button-primary" on-click=app.setHobby()>Set Hobby</button>
+    </section>
 
-  <footer></footer>
+    <section id="exercise-3">
+      <h4 class="challenge">Third Challenge</h4>
+      <div class="content">
+        My favorite website is <span id="website">...</span>
+      </div>
+      <button class="button-primary" on-click=app.setWebsite()>Set Website</button>
+    </section>
+    <footer></footer>
+  </div>
 </body>
 </html>
