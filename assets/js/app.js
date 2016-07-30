@@ -1,5 +1,5 @@
 // message in the console
-console.log("Hi there, welcome to the JavaScript Console. Feel free to type 'app' to see the methods available to the application we're going to build.");
+console.log("Hi there, welcome to the JavaScript console!");
 
 // initialize the application
 var app = new Object();

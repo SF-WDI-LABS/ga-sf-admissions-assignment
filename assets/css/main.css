@@ -1,7 +1,8 @@
 /* custom styles */
 
-pre > code {
+pre > code[class*="language-"], pre[class*="language-"] {
 	white-space: pre-line;
+	background-color: transparent;
 }
 
 #page-wrapper {
