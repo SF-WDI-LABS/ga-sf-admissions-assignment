@@ -1,0 +1,21 @@
+/* custom styles */
+
+pre > code {
+	white-space: pre-line;
+}
+
+#page-wrapper {
+	padding: 2em;
+	background-color: #f4f4f4;
+	color: #373737;
+}
+
+.example-image {
+	width: 75%;
+}
+
+@media (max-width: 500px) {
+	.example-image {
+		width: 100%;
+	}
+}

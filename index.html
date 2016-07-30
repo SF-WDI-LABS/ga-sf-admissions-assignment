@@ -10,13 +10,13 @@
   <!-- mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- styles -->
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/skeleton.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="vendor/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="vendor/css/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
   <!-- scripts -->
-  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
   <!-- favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 <body>
   <div id="page-wrapper">
@@ -25,33 +25,40 @@
     </header>
 
     <section id="lesson-intro">
-      <h4>By the end of this mini lesson you should be able to...</h4>
+      <h4>By the end of this lesson you should be able to...</h4>
       <ul>
-        <li>Receive user input by using a prompt</li>
-        <li>Select HTML elements in JavaScript</li>
-        <li>Change the inner HTML of elements in JavaScript</li>
+        <li>Receive user input using a prompt</li>
+        <li>Select an HTML element in JavaScript</li>
+        <li>Change the inner HTML an element in JavaScript</li>
       </ul>
       <h4></h4>
     </section>
 
     <section id="objective-one">
-      <h4>User Prompts</h4>
-      ...
+      <h4>Receiving user input using a prompt</h4>
+      <p>We're going to write some Javascript code to prompt our user. We <em>could</em> write the code the file <b>assets/js/app.js</b>, but let's first play around in the <a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en">JavaScript Console</a> to ensure it's working. Assuming a Chrome browser, to enter into the console, navigate to <b>View -> Developer -> JavaScript Console</b>. Once open, the console should look something like this:</p>
+      <img src="assets/images/javascript-console.png" alt="Javascript Console" class="example-image">
+      <p>Great! Now we're ready to write our prompt message! In the console type
+      <pre>
+        <code>var sentiment = prompt("How are you feeling today?")
+        console.log("Today you are", sentiment);</code>
+      </pre>
+      </p>
     </section>
 
     <section id="objective-two">
-      <h4>Selecting Elements</h4>
+      <h4>Selecting an HTML element in JavaScript</h4>
       ...
     </section>
 
     <section id="objective-three">
-      <h4>Inner HTML</h4>
+      <h4>Changing the inner HTML of an element in JavaScript</h4>
       ...
     </section> 
 
     <section id="exercise-1">
       <h4 class="challenge">First Challenge</h4>
-      <p>Edit the function `app.setName()` in the file `app.js` such that a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">prompt</a> is given to the user. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">Select the element with id</a> `first-name` and set its <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">inner HTML</a> to the input received from the user.</p>
+      <p>Edit the function <code>app.setName()</code> in the file <b>app.js</b> such that a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">prompt</a> is given to the user. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">Select the element with id</a> <code>first-name</code> and set its <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">inner HTML</a> to the input received from the user.</p>
       <div class="content">
         Hello there! My name is <span id="first-name">...</span>
       </div>
