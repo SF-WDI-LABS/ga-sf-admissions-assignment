@@ -18,7 +18,7 @@
   <script type="text/javascript" src="vendor/js/prism.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
   <!-- favicon -->
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
 </head>
 <body>
   <div id="page-wrapper">
@@ -49,7 +49,7 @@
     <section id="objective-one">
       <h4>Receiving user input using prompts</h4>
       <p>We're going to write some Javascript code to prompt our user. We <em>could</em> write the code the file <b>assets/js/app.js</b>, but let's first play around in the <a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en" target="_blank">JavaScript Console</a> to ensure it's working. Assuming a Chrome browser, to enter into the console, navigate to <kbd>View</kbd> -> <kbd>Developer</kbd> -> <kbd>JavaScript Console</kbd></b>. Once open, the console should look something like this:</p>
-      <img src="assets/images/javascript-console.png" alt="Javascript Console" class="example-image">
+      <img src="assets/imgs/javascript-console.png" alt="Javascript Console" class="example-image">
       
       <p>Great! Now we're ready to write our prompt message! In the console type:</p>
       <pre>
@@ -58,10 +58,10 @@
       </pre>
       
       <p>You should have seen a prompt message:</p>
-      <img src="assets/images/prompt-message.png" alt="Prompt Message" class="example-image">
+      <img src="assets/imgs/prompt-message.png" alt="Prompt Message" class="example-image">
       
       <p>And, depending on what you typed, a corresponding output in the terminal:</p>
-      <img src="assets/images/prompt-result.png" alt="Prompt Result" class="example-image">
+      <img src="assets/imgs/prompt-result.png" alt="Prompt Result" class="example-image">
       
       <p>Note: <code>console.log()</code> is a simple function that prints what you give it to the console in your browser. You will also notice the last thing the console prints is <code>undefined</code>. That's because <code>console.log()</code> doesn't "return" anything. Don't worry about these details for now!</p> 
       
@@ -84,12 +84,47 @@
 
       <p>If you navigate to <a href="http://example.com/" target="_blank">example.com</a>, the text "Example Domain" is contained within a <code>h1</code> element. See for yourself, by right clicking on that text, to open a menu, and selecting the option <kbd>Inspect</kbd>.</p>
 
-      <p></p>
+      <p>In the JavaScript console you'll see the word <code>document</code> references the entire HTML page on the screen. It is a variable that stores information about our page that let's us view and manipulate it. This variable is also refered to as the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">Document Object Model</a> or DOM for short. Using the DOM we can affect the HTML document (webpage) we are viewing.</p>
+
+      <p>Let's use the DOM to select something on the webpage. Below there is a set of Pokémon. Let's explore how we could select one of them. They've each been assigned an HTML <code>id</code> that corresponds to their pokémon name. Given an <code>id</code> is unique, it is a good <em>identifier</em> to target something based on. The way we can do this is by using one of the DOM's built-in methods, <code>getElementById</code>.</p>
+
+      <p><em>Note: a method is a function that is contained by an object (in this case, the DOM).</em></p>
+
+      <p>Now, let's catch some Pokémon!</p>
+
+      <p id="pokemon">
+        <img src="assets/imgs/bulbasaur.png" alt="bulbasaur" class="pokemon" id="bulbasaur">
+        <img src="assets/imgs/charmander.png" alt="charmander" class="pokemon" id="charmander">
+        <img src="assets/imgs/squirtle.png" alt="squirtle" class="pokemon" id="squirtle">
+        <img src="assets/imgs/pikachu.png" alt="pikachu" class="pokemon" id="pikachu">
+      </p>
+
+      <p>In the JavaScript console try selecting Charmander and removing him (putting him into our pokéball) with the following command:
+      <pre>
+        <code class="language-javascript">var charmander = document.getElementById("charmander");
+        charmander.remove();
+        </code>
+      </pre>
+      Did Charmander disapear from the page? If so, good!</p>
+
+      <p><em>Note: refreshing the page resets it to it's origional state, so Charmander reappears. That's because we never changed the content of the HTML file, but simply affected it using JavaScript it after it was loaded.</em>
+      </p>
+
+      <h4>Practice: I choose you, Pikachu!</h4>
+      <p>Let's put Pikachu in the pokéball next! Select Pikachu based on his <code>id</code>, "pikachu", and remove him from the page.</p>
+      
+      <p><details><summary>Example solution</summary>
+      <pre>
+        <code class="language-javascript">var pika = document.getElementById("pikachu");
+        pika.remove();</code>
+      </pre>
+      </details></p>
+
     </section>
 
     <section id="objective-three">
       <h4>Changing the inner HTML of an element to display an output to the user</h4>
-      ...
+      
     </section> 
 
     <section id="exercise-1">

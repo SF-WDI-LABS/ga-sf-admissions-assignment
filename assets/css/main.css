@@ -9,14 +9,32 @@ pre > code[class*="language-"], pre[class*="language-"] {
 	padding: 2em;
 	background-color: #f6f6f6;
 	color: #000;
+	font-size: 18px;
+}
+
+@media (max-width: 500px) {
+	#page-wrapper {
+		font-size: 14px;
+	}
 }
 
 .example-image {
-	width: 75%;
+	max-height: 600px;
+	border-left: .5em #d6d6d6 solid;
 }
 
 @media (max-width: 500px) {
 	.example-image {
 		width: 100%;
 	}
+}
+
+#pokemon {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-around;
+}
+
+.pokemon {
+	height: 100px;
 }
