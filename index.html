@@ -70,12 +70,14 @@
       
       <p><em>Note: an example solution is provided; please try on your own before you look at it.</em></p>
       
-      <p><details><summary>Example solution</summary>
-      <pre>
-        <code class="language-javascript">var food = prompt("What did you eat for breakfast this morning?");
-        console.log("You ate", food, "for breakfast.");</code>
-      </pre>
-      </details></p>
+      <p>
+        <details><summary>Example solution</summary>
+          <pre>
+            <code class="language-javascript">var food = prompt("What did you eat for breakfast this morning?");
+            console.log("You ate", food, "for breakfast.");</code>
+          </pre>
+        </details>
+      </p>
     </section>
 
     <section id="objective-two">
@@ -113,18 +115,50 @@
       <h4>Practice: I choose you, Pikachu!</h4>
       <p>Let's put Pikachu in the pokéball next! Select Pikachu based on his <code>id</code>, "pikachu", and remove him from the page.</p>
       
-      <p><details><summary>Example solution</summary>
-      <pre>
-        <code class="language-javascript">var pika = document.getElementById("pikachu");
-        pika.remove();</code>
-      </pre>
-      </details></p>
+      <p>
+        <details><summary>Example solution</summary>
+          <pre>
+            <code class="language-javascript">var pika = document.getElementById("pikachu");
+            pika.remove();</code>
+          </pre>
+        </details>
+      </p>
 
     </section>
 
     <section id="objective-three">
       <h4>Changing the inner HTML of an element to display an output to the user</h4>
+      <p>Now that we can get user input and select elements on a page, we can think about how to display a user's input back to them! We'll have to change what's inside of an HTML element first by selecting it, then setting its <code>innerHTML</code> to anything we want. Let's do this to update the text below in order to reflect something we've learned today.</p>
+
+      <h5>Today I learned: <span id="new-knowledge">...</span></h5>
+  
+      <p>The elipse above is wrapped in an HTML <code>span</code> tag that has the <code>id</code> "new-knowledge". Knowing this, we should be able to easily select it. Thereafter, we can change what's inside of it to reflect something we've learned. Let's see an example of how this will work.</p>
+
+      <p>
+        <pre>
+            <code class="language-javascript">var newKnowledge = document.getElementById("new-knowledge");
+            newKnowledge.innerHTML = "how to select and manipulate DOM elements!"
+            </code>
+        </pre>
+      </p>
       
+      <h4>Practice: All together now!</h4>
+      <p>Let's prompt the user for their favorite pokémon and display it back to them on the site! First, prompt the user for their favorite pokemon and store the input in a variable. Then select the text below using the <code>id</code> "favorite-pokemon" and change the element's inner HTML to display the favorite pokémon!</p>
+
+      <h5>My favorite pokémon is: <span id="favorite-pokemon">...</span></h5>
+      
+      <p><em>Note: synthesizing new knowledge is always challenging, so try your best, but be encouraged to look at the example solution below thereafter.</em></p>
+
+      <p>
+        <details><summary>Example solution</summary>
+          <pre>
+            <code class="language-javascript">var favPokemonInput = prompt("What is your favorite pokemon?");
+            var favPokemonElement = document.getElementById("favorite-pokemon");
+            favPokemonElement.innerHTML = favPokemonInput;
+            </code>
+          </pre>
+        </details>
+      </p>
     </section> 
 
     <section id="exercise-1">
