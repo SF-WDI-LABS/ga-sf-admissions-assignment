@@ -22,6 +22,7 @@
 </head>
 <body>
   <div id="page-wrapper">
+
     <header>
       <h1>Web Input &amp Output</h1>
     </header>
@@ -29,12 +30,14 @@
     <section id="workshop-intro">
       <h4>This workshop is useful because...</h4>
       <p>Today we will learn one way to receive user input and then display it back to them by writing JavaScript to manipulate HTML—a very important skill for a web developer!</p>
+
       <h4>By the end of this workshop you should be able to...</h4>
       <ul>
         <li>Receive user input using prompts</li>
         <li>Select HTML elements in JavaScript</li>
         <li>Change the inner HTML of elements to display an output to the user</li>
       </ul>
+
       <h4>You should already be familiar with...</h4>
       <ul>
         <li><a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/HTML_basics" target="_blank">Some HTML</li>
@@ -47,19 +50,26 @@
       <h4>Receiving user input using prompts</h4>
       <p>We're going to write some Javascript code to prompt our user. We <em>could</em> write the code the file <b>assets/js/app.js</b>, but let's first play around in the <a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en" target="_blank">JavaScript Console</a> to ensure it's working. Assuming a Chrome browser, to enter into the console, navigate to <kbd>View</kbd> -> <kbd>Developer</kbd> -> <kbd>JavaScript Console</kbd></b>. Once open, the console should look something like this:</p>
       <img src="assets/images/javascript-console.png" alt="Javascript Console" class="example-image">
+      
       <p>Great! Now we're ready to write our prompt message! In the console type:</p>
       <pre>
         <code class="language-javascript">var sentiment = prompt("How are you feeling today?");
         console.log("Today you are", sentiment, "!");</code>
       </pre>
+      
       <p>You should have seen a prompt message:</p>
       <img src="assets/images/prompt-message.png" alt="Prompt Message" class="example-image">
+      
       <p>And, depending on what you typed, a corresponding output in the terminal:</p>
       <img src="assets/images/prompt-result.png" alt="Prompt Result" class="example-image">
+      
       <p>Note: <code>console.log()</code> is a simple function that prints what you give it to the console in your browser. You will also notice the last thing the console prints is <code>undefined</code>. That's because <code>console.log()</code> doesn't "return" anything. Don't worry about these details for now!</p> 
+      
       <h4>Practice: Breakfast Prompt</h4>
       <p>Prompt the user with a message "What did you eat for breakfast this morning?" and display their answer to the console. For example, if the user answered "oatmeal", display "You ate oatmeal for breakfast."</p>
+      
       <p><em>Note: an example solution is provided; please try on your own before you look at it.</em></p>
+      
       <p><details><summary>Example solution</summary>
       <pre>
         <code class="language-javascript">var food = prompt("What did you eat for breakfast this morning?");
@@ -72,7 +82,9 @@
       <h4>Selecting HTML elements in JavaScript</h4>
       <p><a href="https://www.w3.org/TR/html-markup/elements.html" target="_blank">HTML elements</a> are the content that make up a webpage. We create them with HTML tags <code><</code> and <code>></code>. For example the <code>h1</code> elment is used to be the main heading of a webpage. We could create one in an HTML file by writing <code>&lth1&gtI'm an h1 element&lt/h1&gt</code>.</p>
 
-      <p>If you navigate to <a href="http://example.com/" target="_blank">example.com</a>, a website that exists literaly as an example, the text "Example Domain" is contained within a <code>h1</code> element. Feel free to right click on it to open a menu and select the option <kbd>Inspect</kbd> to see for yourself!
+      <p>If you navigate to <a href="http://example.com/" target="_blank">example.com</a>, the text "Example Domain" is contained within a <code>h1</code> element. See for yourself, by right clicking on that text, to open a menu, and selecting the option <kbd>Inspect</kbd>.</p>
+
+      <p></p>
     </section>
 
     <section id="objective-three">
