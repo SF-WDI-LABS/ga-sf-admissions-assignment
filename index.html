@@ -29,7 +29,7 @@
 
     <section id="workshop-intro">
       <h4>This workshop is useful because...</h4>
-      <p>Today we will learn one way to receive user input and then display it back to them by writing JavaScript to manipulate HTML—a very important skill for a web developer!</p>
+      <p>Today we will learn one way to both receive input and output by using JavaScript to manipulate our HTML document—a critical skill for any web developer!</p>
 
       <h4>By the end of this workshop you should be able to...</h4>
       <ul>
@@ -48,7 +48,7 @@
 
     <section id="objective-one">
       <h4>Receiving user input using prompts</h4>
-      <p>We're going to write some Javascript code to prompt our user. We <em>could</em> write the code the file <b>assets/js/app.js</b>, but let's first play around in the <a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en" target="_blank">JavaScript Console</a> to ensure it's working. Assuming a Chrome browser, to enter into the console, navigate to <kbd>View</kbd> -> <kbd>Developer</kbd> -> <kbd>JavaScript Console</kbd></b>. Once open, the console should look something like this:</p>
+      <p>We're going to write some Javascript code to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" target="_blank">prompt</a> our user. We <em>could</em> write the code the file <b>assets/js/app.js</b>, but let's first play around in the <a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en" target="_blank">JavaScript Console</a> to ensure it's working. Assuming a Chrome browser, to enter into the console, navigate to <kbd>View</kbd> -> <kbd>Developer</kbd> -> <kbd>JavaScript Console</kbd></b>. Once open, the console should look something like this:</p>
       <img src="assets/imgs/javascript-console.png" alt="Javascript Console" class="example-image">
       
       <p>Great! Now we're ready to write our prompt message! In the console type:</p>
@@ -88,7 +88,7 @@
 
       <p>In the JavaScript console you'll see the word <code>document</code> references the entire HTML page on the screen. It is a variable that stores information about our page that let's us view and manipulate it. This variable is also refered to as the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">Document Object Model</a> or DOM for short. Using the DOM we can affect the HTML document (webpage) we are viewing.</p>
 
-      <p>Let's use the DOM to select something on the webpage. Below there is a set of Pokémon. Let's explore how we could select one of them. They've each been assigned an HTML <code>id</code> that corresponds to their pokémon name. Given an <code>id</code> is unique, it is a good <em>identifier</em> to target something based on. The way we can do this is by using one of the DOM's built-in methods, <code>getElementById</code>.</p>
+      <p>Let's use the DOM to select something on the webpage. Below there is a set of Pokémon. Let's explore how we could select one of them. They've each been assigned an HTML <code>id</code> that corresponds to their pokémon name. Given an <code>id</code> is unique, it is a good <em>identifier</em> to target something based on. The way we can do this is by using one of the DOM's built-in methods, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" target="_blank"><code>getElementById</code></a>.</p>
 
       <p><em>Note: a method is a function that is contained by an object (in this case, the DOM).</em></p>
 
@@ -128,9 +128,9 @@
 
     <section id="objective-three">
       <h4>Changing the inner HTML of an element to display an output to the user</h4>
-      <p>Now that we can get user input and select elements on a page, we can think about how to display a user's input back to them! We'll have to change what's inside of an HTML element first by selecting it, then setting its <code>innerHTML</code> to anything we want. Let's do this to update the text below in order to reflect something we've learned today.</p>
+      <p>Now that we can get user input and select elements on a page, we can think about how to display a user's input back to them! We'll have to change what's inside of an HTML element first by selecting it, then setting its <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank"><code>innerHTML</code></a> to anything we want. Let's do this to update the text below in order to reflect something we've learned today.</p>
 
-      <h5>Today I learned: <span id="new-knowledge">...</span></h5>
+      <h5 class="user-output">Today I learned: <span id="new-knowledge">...</span></h5>
   
       <p>The elipse above is wrapped in an HTML <code>span</code> tag that has the <code>id</code> "new-knowledge". Knowing this, we should be able to easily select it. Thereafter, we can change what's inside of it to reflect something we've learned. Let's see an example of how this will work.</p>
 
@@ -145,7 +145,7 @@
       <h4>Practice: All together now!</h4>
       <p>Let's prompt the user for their favorite pokémon and display it back to them on the site! First, prompt the user for their favorite pokemon and store the input in a variable. Then select the text below using the <code>id</code> "favorite-pokemon" and change the element's inner HTML to display the favorite pokémon!</p>
 
-      <h5>My favorite pokémon is: <span id="favorite-pokemon">...</span></h5>
+      <h5 class="user-output">My favorite pokémon is: <span id="favorite-pokemon">...</span></h5>
       
       <p><em>Note: synthesizing new knowledge is always challenging, so try your best, but be encouraged to look at the example solution below thereafter.</em></p>
 
@@ -163,11 +163,31 @@
 
     <section id="exercise-1">
       <h4 class="challenge">First Challenge</h4>
-      <p>Edit the function <code>app.setName()</code> in the file <b>assets/js/app.js</b> such that a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" target="_blank">prompt</a> is given to the user. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" target="_blank">Select the element with id</a> <code>first-name</code> and set its <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" target="_blank">inner HTML</a> to the input received from the user.</p>
-      <div class="content">
-        Hello there! My name is <span id="first-name">...</span>
-      </div>
-      <button class="button-primary" on-click=app.setName()>Set Name</button>
+      <p>Edit the function <code>app.setName()</code> in the file <b>assets/js/app.js</b> such that a prompt is given to the user. Select the element with id "first-name" and set its inner HTML to the input received from the user.</p>
+      <p><em>Note: Clicking this button will execute the function <code>app.setName()</code></em></span></p>
+      <button class="button-primary" onclick=app.setName()>Set Name</button>
+      <h5 class="user-output">Hello there! My name is <span id="first-name">...</span></h5>
+    </section>
+    <section id="exercise-2">
+      <h4 class="challenge">Second Challenge</h4>
+      <p>Similar to the previous challenge, in the same file, edit the function <code>app.setHobby()</code> such that after clicking the button "Set Hobby", the user is prompted for their favorite hobby which is displayed in the element below with the id "favorite-hobby".</p>
+      <button class="button-primary" onclick=app.setHobby()>Set Hobby</button>
+      <h5 class="user-output">My favorite hobby is <span id="favorite-hobby">...</span></h5>
+    </section>
+    <section id="exercise-3">
+      <h4 class="challenge">Third Challenge</h4>
+      <p>Now we're going to prompt the user for their favorite website! Similar to above, edit the function <code>app.setWebsite</code> to prompt the user for their input and use it to set the inner HTML of the element with id "favorite-website".
+      <p><em>Note: For now, just display the website's link as text.</code></em></span></p>
+      <button class="button-primary" onclick=app.setWebsite()>Set Website</button>
+      <h5 class="user-output">My favorite website is <span id="favorite-website">...</span></h5>
+    </section>
+    <section id="exercise-4">
+      <h4 class="challenge">Bonus Challenge</h4>
+      <p>Let's refactor the <code>app.setWebsite</code> function in order for it to not just render the website as text, but to render it as a clickable <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">anchor</a> element with the <code>href</code> set to the URL of the user's favorite website they're prompted for and the display text of the anchor element just set to "click me!".</p>
+      <p><em>Hint: Don't forget to add <code>http://</code> to the beginning of the site URL if you want the link to work!</em></span></p>
+    </section>
+    <section>
+      <p><em>Feedback for this sample lesson? Send an email to <a href="mailto:ilias@ga.co">one of the creators</a>.</em></p>
     </section>
 <!-- 
     <section id="exercise-2">
@@ -175,7 +195,7 @@
       <div class="content">
         My favorite hobby is <span id="hobby">...</span>
       </div>
-      <button class="button-primary" on-click=app.setHobby()>Set Hobby</button>
+      <button class="button-primary" onclick=app.setHobby()>Set Hobby</button>
     </section>
 
     <section id="exercise-3">
@@ -183,7 +203,7 @@
       <div class="content">
         My favorite website is <span id="website">...</span>
       </div>
-      <button class="button-primary" on-click=app.setWebsite()>Set Website</button>
+      <button class="button-primary" onclick=app.setWebsite()>Set Website</button>
     </section> -->
     <footer>©2016 General Assembly. All rights reserved.</footer>
   </div>
