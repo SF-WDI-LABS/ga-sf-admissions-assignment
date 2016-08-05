@@ -21,8 +21,5 @@ app.setHobby = function setHobby() {
 }
 
 app.setWebsite = function setWebsite() {
-  console.log("executing function app.setWebsite"); // sanity check
-  var favSite = prompt("what's your fav site?");
-  var siteEl = document.getElementById("favorite-website");
-  siteEl.innerHTML = "<a href=http://" + favSite + ">clickme!</a>"
+  // code here
 }
