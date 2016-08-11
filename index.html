@@ -34,57 +34,62 @@
 
       <h4>By the end of this workshop you should be able to...</h4>
       <ul>
-        <li>Receive user input using prompts</li>
+        <li>Receive user <em>input</em> using prompts</li>
         <li>Select HTML elements in JavaScript</li>
-        <li>Change the inner HTML of elements to display an output to the user</li>
+        <li>Change the inner HTML of elements to display an <em>output</em> to the user</li>
       </ul>
 
       <h4>You should already be familiar with...</h4>
       <ul>
-        <li><a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/HTML_basics" target="_blank">Some HTML</li>
-        <li><a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/CSS_basics" target="_blank">Some CSS</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">Basic JavaScript</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/HTML_basics" target="_blank">HTML Basics</li>
+        <li><a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/CSS_basics" target="_blank">CSS Basics</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">JavaScript Basics</a></li>
       </ul>
+    </section>
+
+    <section id="objective-zero">
+      <h4>Input & Output</h4>
+      <p>What is input & output, also known as I/O? <a href="https://en.wikipedia.org/wiki/Input/output">reference</a></p>
     </section>
 
     <section id="objective-one">
       <h4>Receiving user input using prompts</h4>
-      <p>We're going to write some Javascript code to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" target="_blank">prompt</a> our user. We <em>could</em> write the code the file <b>assets/js/app.js</b>, but let's first play around in the <a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en" target="_blank">JavaScript Console</a> to ensure it's working. Assuming a Chrome browser, to enter into the console, navigate to <kbd>View</kbd> -> <kbd>Developer</kbd> -> <kbd>JavaScript Console</kbd></b>. Once open, the console should look something like this:</p>
+      <p>We're going to write some Javascript code to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" target="_blank">prompt</a> our user. To do this let's open up the <a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en" target="_blank">JavaScript Console</a>. Assuming you're using a Chrome browser, navigate to <kbd>View</kbd> -> <kbd>Developer</kbd> -> <kbd>JavaScript Console</kbd></b> to open the console.
 
-      <p>Great! Now we're ready to write our prompt message! In the console type:</p>
+      <p>Now we're ready to write our prompt message! In the console type:</p>
       <pre>
-        <code class="language-javascript" contenteditable>var language = "javascript";
+        <code class="language-javascript">var language = "javascript";
 function code(lang) {
   return "let's code some " + lang + "!";
 }
 code(language);</code>
       </pre>
+      <p>At this point your screen should like something like this, and don't worry if the console is at the bottom or the side of the window.</p>
+      <img src="assets/imgs/javascript-console.png" alt="JS Console" class="example-image">
       
-      <p>Great! Now we're ready to write our prompt message! In the console type:</p>
+      <p>Great! Now let's prompt the user for some input and see the result displayed in the console. Execute the code below by clicking on the button.</p>
       <pre>
         <code class="language-javascript">var sentiment = prompt("How are you feeling today?");
-console.log("Today you are", sentiment, "!");</code>
+console.log("Today you are", sentiment);</code>
+<button onclick="exec.runCode(this)">Execute this code</button>
       </pre>
-      <button onclick="exec.runCode(this)">Execute this code</button>
       
-      <p>You should have seen a prompt message:</p>
-      <img src="assets/imgs/prompt-message.png" alt="Prompt Message" class="example-image">
-      
-      <p>And, depending on what you typed, a corresponding output in the terminal:</p>
-      <img src="assets/imgs/prompt-result.png" alt="Prompt Result" class="example-image">
+      <p>Try clicking the above button. It should produce a prompt message that will display what it's input to the console as output.</p>
       
       <p>Note: <code>console.log()</code> is a simple function that prints what you give it to the console in your browser. You will also notice the last thing the console prints is <code>undefined</code>. That's because <code>console.log()</code> doesn't "return" anything. Don't worry about these details for now!</p> 
       
       <h4>Practice: Breakfast Prompt</h4>
-      <p>Prompt the user with a message "What did you eat for breakfast this morning?" and display their answer to the console. For example, if the user answered "oatmeal", display "You ate oatmeal for breakfast."</p>
-      
-      <p><em>Note: an example solution is provided; please try on your own before you look at it.</em></p>
-      
+      <p>Edit the code below to prompt the user with a message "What did you eat for breakfast this morning?" and display their answer to the console. For example, if the user answered "oatmeal", display "You ate oatmeal for breakfast." When you are done click the button "Execute this code" and see the output in the console.</p>
+      <pre>
+        <code class="language-javascript" contenteditable>var food = prompt("...");
+console.log("...");</code>
+<button onclick="exec.runCode(this)">Execute this code</button>
+      </pre>
       <p>
-        <details><summary>Example solution</summary>
+        <details><summary>Example solution:</summary>
           <pre>
             <code class="language-javascript">var food = prompt("What did you eat for breakfast this morning?");
-console.log("You ate", food, "for breakfast.");</code>
+console.log("You ate", food, "for breakfast");</code>
           </pre>
         </details>
       </p>
@@ -146,8 +151,7 @@ charmander.remove();</code>
       <p>
         <pre>
             <code class="language-javascript">var newKnowledge = document.getElementById("new-knowledge");
-newKnowledge.innerHTML = "how to select and manipulate DOM elements!"
-            </code>
+newKnowledge.innerHTML = "how to select and manipulate DOM elements!"</code>
         </pre>
       </p>
       
