@@ -49,12 +49,14 @@
 
     <section id="objective-zero">
       <h4>Input & Output</h4>
-      <p>What is input & output, also known as I/O? <a href="https://en.wikipedia.org/wiki/Input/output">reference</a></p>
+      <p>Today we'll doing I/O in the context of the browser by capturing the user's input to perform an action that outputs a result in the JavaScript console. But what does this mean?</p>
+      <p>First of all, <a href="https://en.wikipedia.org/wiki/Input/output">input/output</a>, also known simply as <b>I/O</b>, is the communication process between the outside world, the input, and a computer, the output. More specifically, inputs can be signals or data recieved by the computer and output can be signals or data sent from it. Examples of input devices include: keyboards, mice, and cameras, while examples of output devices include: monitors, printers, and speakers.</p>
+      <p></p>
     </section>
 
     <section id="objective-one">
       <h4>Receiving user input using prompts</h4>
-      <p>We're going to write some Javascript code to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" target="_blank">prompt</a> our user. To do this let's open up the <a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en" target="_blank">JavaScript Console</a>. Assuming you're using a Chrome browser, navigate to <kbd>View</kbd> -> <kbd>Developer</kbd> -> <kbd>JavaScript Console</kbd></b> to open the console.
+      <p>As mentioned previously, we're going to write some Javascript code to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" target="_blank">prompt</a> our user. To do this let's open up the <a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en" target="_blank">JavaScript Console</a>. This is a place where we can give the browser specific JavaScript commands and see the output. Assuming you're using a Chrome browser, navigate to <kbd>View</kbd> -> <kbd>Developer</kbd> -> <kbd>JavaScript Console</kbd></b> to open the console.</p>
 
       <p>Now we're ready to write our prompt message! In the console type:</p>
       <pre>
@@ -76,7 +78,7 @@ console.log("Today you are", sentiment);</code>
       
       <p>Try clicking the above button. It should produce a prompt message that will display what it's input to the console as output.</p>
       
-      <p>Note: <code>console.log()</code> is a simple function that prints what you give it to the console in your browser. You will also notice the last thing the console prints is <code>undefined</code>. That's because <code>console.log()</code> doesn't "return" anything. Don't worry about these details for now!</p> 
+      <p>Note: <a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Outputting_text_to_the_console" target="_blank"><code>console.log()</code></a> is just a simple way to print something to the console.</p> 
       
       <h4>Practice: Breakfast Prompt</h4>
       <p>Edit the code below to prompt the user with a message "What did you eat for breakfast this morning?" and display their answer to the console. For example, if the user answered "oatmeal", display "You ate oatmeal for breakfast." When you are done click the button "Execute this code" and see the output in the console.</p>
