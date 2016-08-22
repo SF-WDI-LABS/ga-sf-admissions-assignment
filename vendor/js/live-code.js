@@ -1,22 +1,21 @@
 const liveCode = new Object();
 
-liveCode.getCode = function getCode(e) {
-  const context = e.target;
-  console.log("executing code in context:", context);
-  // grab the previous element's inner html
-  const innerHtml = context.previousElementSibling.innerHTML;
-  // remove all the html tags added for styling
-  const code = innerHtml.replace(/(<.*?>)/g, "");
+liveCode.getCode = function getCode(context) {
+  const innerHtml = context.innerHTML; // grab the previous element's inner html
+  const code = innerHtml.replace(/(<.*?>)/g, ""); // remove all the html tags added for styling
   return code;
 }
 
 liveCode.runCode = function runCode(e) {
-  console.log(this)
-  const code = liveCode.getCode(e);
-  // execute the string that represents javascript code
-  eval(code);
+  const code = liveCode.getCode(e.target.previousElementSibling); // get raw code
+  eval(code); // execute a string that represents javascript code
 }
 
 liveCode.reHighlight = function reHighlight(e) {
-  console.log("editing:", e.target);
+  const target = e.target;
+  const charPos = $(target).caret("pos"); // find original cursor position
+  const code = liveCode.getCode(target); // get raw code
+  const html = Prism.highlight(code, Prism.languages.javascript);
+  this.innerHTML = html; // update highlighting
+  $(target).caret("pos", charPos); // set to original cursor position
 }
