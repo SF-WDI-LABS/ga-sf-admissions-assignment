@@ -29,7 +29,7 @@
 }
 
 #pokemon > img {
-	height: 100px;
+	height: 150px;
 	transition: all 0.5s ease;
 }
 
@@ -61,11 +61,16 @@ button {
 	color: #f6f6f6;
   background: #2d9abb;
 	font-size: 12px;
+	margin: 0;
 }
 
 button:hover, button:focus {
 	color: #f6f6f6;
 	background: #32b8e1;
+}
+
+.button-primary {
+	margin-bottom: 1em;
 }
 
 pre {
