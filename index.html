@@ -39,8 +39,8 @@
       <h4>What are the objectives?</h4>
       <p><em>After this workshop, developers will be able to:</em></p>
       <ul>
-        <li>Use the JavaScript Console</li>
         <li>Change an element's CSS class using JavaScript</li>
+        <li>Use the JavaScript Console</li>
         <li>Capturing User Input</li>
         <li>Display an output to the user on the page</li>
       </ul>
@@ -51,10 +51,6 @@
         <li><a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/CSS_basics" target="_blank">CSS Basics</a></li>
         <li><a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">JavaScript Basics</a></li>
       </ul>
-    </section>
-    <section>
-      <h3>Using the JavaScript Console</h3>
-      <p>The <a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en" target="_blank">JavaScript Console</a> is a place where we can give the browser specific JavaScript commands and see the output. Assuming you're using a Chrome browser, navigate to <kbd>View</kbd> -> <kbd>Developer</kbd> -> <kbd>JavaScript Console</kbd></b> to open the console. Alternatively, the keycommand for Mac users is: <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>J</kbd></p>
     </section>
     <section>
       <h3>Changing an element's CSS class using JavaScript</h3>
@@ -69,29 +65,42 @@
         <img src="assets/imgs/charmander.png" alt="charmander" id="charmander">
         <img src="assets/imgs/squirtle.png" alt="squirtle" id="squirtle">
         <img src="assets/imgs/pikachu.png" alt="pikachu" id="pikachu">
-      </p
-      <p>In the JavaScript console, try selecting Charmander and removing him (putting him into the pokéball) with the following command:</p>
+      </p>
+      <p>In the JavaScript console, let's select Charmander and remove him (put him into his pokéball). See what the code below does by clicking on the "Execute" button.</p>
       <pre class="code-block">
         <code class="language-javascript">var charmander = document.getElementById("charmander");
 charmander.className = "caught";</code>
+<button class="execCode">Execute</button>
       </pre>
       <p><em>Note: refreshing the page sets it to it's origional state, making Charmander reappear.</em>
       <p>How does this code make Charmander disappear? We targeted the Charmander <code>img</code> element and added the class, <code>caught</code>. This class has the CSS rule <code>opacity: 0</code> applied to it, making the element transparent.</p>
       <h3>Practice: I choose you, Pikachu!</h3>
-      <p>Let's put Pikachu in the pokéball next! Select Pikachu based on his <code>id</code>, "pikachu", and change his <code>class</code> to "caught".</p>
-      <p>
+      <p><b>Edit the code below</b> to catch Pikachu next! It will be helpful to understand that anything written after <code>//</code> in JavaScript is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Comments" target="_blank">comment</a></em>. Write code below the corresponding comment. Select Pikachu based on his <code>id</code>, "pikachu", and change his <code>class</code> to "caught".</p>
+      <pre class="code-block">
+        <code class="language-javascript editable" contenteditable spellcheck="false">// select the element with the `id` Pikachu and save it to a variable
+
+// change the element's class to "caught"
+
+</code>
+<button class="execCode">Execute</button>
+      </pre>
         <details><summary>Example solution</summary>
           <pre class="code-block">
             <code class="language-javascript">var pika = document.getElementById("pikachu");
 pika.className = "caught";</code>
+<button class="execCode">Execute</button>
           </pre>
         </details>
       </p>
     </section>
     <section>
+      <h3>Using the JavaScript Console</h3>
+      <p>The <a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en" target="_blank">JavaScript Console</a> is a place where we can give the browser specific JavaScript commands and see the output. Assuming you're using a Chrome browser, navigate to <kbd>View</kbd> -> <kbd>Developer</kbd> -> <kbd>JavaScript Console</kbd></b> to open the console. Alternatively, the keycommand for Mac users is: <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>J</kbd></p>
+    </section>
+    <section>
       <h3>Capturing User Input</h3>
       <p>We've just learned how we can capture Pokeémon by writing JavaScript that manipulates our HTML. Let's now learn how to capture a user's input in JavaScript using a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" target="_blank">prompt</a>.
-      <p>Great! Now let's prompt the user for some input and see the result <b>displayed in the console</b>. See what the code below does by clicking on the "Execute" button.</p>
+      <p>Great! Now let's prompt the user for some input and see the result <b>displayed in the console</b>.</p>
       <pre class="code-block">
         <code class="language-javascript">var sentiment = prompt("How are you feeling today?");
 console.log("Today you are", sentiment);</code>
@@ -102,17 +111,17 @@ console.log("Today you are", sentiment);</code>
       <h3>Practice: Breakfast Prompt</h3>
       <p>Edit the code in the box below to prompt the user with the message "What did you eat for breakfast this morning?". Display the user's response in the console in the format, "You ate oatmeal for breakfast", if they answered "oatmeal". Click the button "Execute" to test out the code.</p>
       <pre class="code-block">
-        <code class="language-javascript editable" contenteditable>//edit me
+        <code class="language-javascript editable" contenteditable spellcheck="false">//edit me
 var food = prompt("...");
 console.log("...");</code>
 <button class="execCode">Execute</button>
       </pre>
-      <p><em>Note: Anything written after <code>//</code> in JavaScript is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Comments" target="_blank">comment</a></em></p>
       <p>
         <details><summary>Example solution:</summary>
           <pre class="code-block">
             <code class="language-javascript">var food = prompt("What did you eat for breakfast this morning?");
 console.log("You ate", food, "for breakfast");</code>
+<button class="execCode">Execute</button>
           </pre>
         </details>
       </p>
@@ -134,9 +143,9 @@ newKnowledge.innerHTML = "how to select and manipulate DOM elements!"</code>
 
       <h5 class="user-output">My favorite pokémon is: <span id="favorite-pokemon">...</span></h5>
       <pre class="code-block">
-        <code class="language-javascript editable" contenteditable>// use a prompt to get the user's favorite pokemon &amp save it to a variable
+        <code class="language-javascript editable" contenteditable spellcheck="false">// use a prompt to get the user's favorite pokemon and save it to a variable
 
-// select the element with the id "favorite-pokemon" &amp save it to a variable
+// select the element with the id "favorite-pokemon" and save it to a variable
 
 // set the inner html of the element to the user's favorite pokemon</code>
 
