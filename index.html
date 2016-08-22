@@ -26,19 +26,16 @@
 </head>
 <body>
   <div id="page-wrapper">
-
     <header>
       <div id="ga-logo">
         <img id="ga-logo" src="assets/imgs/ga-logo.png">
       </div>
       <h1>Manipulating HTML with JavaScript</h1>
     </header>
-
     <section id="workshop-intro">
       <h4>Why is this important?</h4>
       <p><em>This workshop is important because:</em></p>
       <p>Today we will learn one way to both receive input and output by using JavaScript to manipulate our HTML document—a critical skill for any web developer!</p>
-
       <h4>What are the objectives?</h4>
       <p><em>After this workshop, developers will be able to:</em></p>
       <ul>
@@ -47,7 +44,6 @@
         <li>Capturing User Input</li>
         <li>Display an output to the user on the page</li>
       </ul>
-
       <h4>Where should we be now?</h4>
       <p><em>Before this workshop, developers should already be able to perform:</em></p>
       <ul>
@@ -56,48 +52,35 @@
         <li><a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">JavaScript Basics</a></li>
       </ul>
     </section>
-
     <section>
       <h3>Using the JavaScript Console</h3>
       <p>The <a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en" target="_blank">JavaScript Console</a> is a place where we can give the browser specific JavaScript commands and see the output. Assuming you're using a Chrome browser, navigate to <kbd>View</kbd> -> <kbd>Developer</kbd> -> <kbd>JavaScript Console</kbd></b> to open the console. Alternatively, the keycommand for Mac users is: <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>J</kbd></p>
     </section>
-
     <section>
       <h3>Changing an element's CSS class using JavaScript</h3>
-      <p>An <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">HTML element</a> is made up of two HTML tags that enclose some inner content.</p>
-
+      <p>An <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">HTML element</a> is made up of two HTML tags that enclose inner content.</p>
       <img src="assets/imgs/anatomy-of-an-html-element.png" alt="anatomy of an html element" />
-
       <p>If you navigate to <a href="http://example.com/" target="_blank">example.com</a>, the text "Example Domain" is contained within a <code>h1</code> element. See for yourself, by right clicking on that text, to open a context menu, and selecting the option <kbd>Inspect</kbd>.</p>
-
       <p>In JavaScript, there is a special word, <code>document</code> that references the entire HTML page on the screen. It is a variable that represents our HTML page. This variable is also refered to as the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">Document Object Model</a> or "DOM" for short. Using the DOM we can affect the HTML document (webpage) we are viewing.</p>
-
-      <p>Let's use the DOM to select something on the webpage. Below there is a set of Pokémon. Let's explore how we could select one of them. They've each been assigned an HTML <code>id</code> that corresponds to their pokémon name. Given an <code>id</code> is unique, it is a good <em>identifier</em> to target something based on. The way we can do this is by using one of the DOM's built-in methods, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" target="_blank"><code>getElementById</code></a>.</p>
-
+      <p>Let's use the DOM to help us select something on the webpage. Let's catch one of the Pokémon below! They've each been assigned an HTML <code>id</code> that corresponds to their pokémon name. Given an <code>id</code> is unique, it is a good <em>identifier</em> to target something based on. The way we can do this is by using one of the DOM's built-in methods, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" target="_blank"><code>getElementById</code></a>.</p>
       <p>Now, let's catch some Pokémon!</p>
-
       <p id="pokemon">
         <img src="assets/imgs/bulbasaur.png" alt="bulbasaur" id="bulbasaur">
         <img src="assets/imgs/charmander.png" alt="charmander" id="charmander">
         <img src="assets/imgs/squirtle.png" alt="squirtle" id="squirtle">
         <img src="assets/imgs/pikachu.png" alt="pikachu" id="pikachu">
-      </p>
-
+      </p
       <p>In the JavaScript console, try selecting Charmander and removing him (putting him into the pokéball) with the following command:</p>
       <pre class="code-block">
         <code class="language-javascript">var charmander = document.getElementById("charmander");
 charmander.className = "caught";</code>
       </pre>
+      <p><em>Note: refreshing the page resets it to it's origional state, so Charmander will reappear.</em>
       <p>Did Charmander disapear from the page? If so, good!</p>
-
       <p>How did this happen? We targeted the Charmander <code>img</code> element, adding an HTML class, <code>caught</code>, which has the CSS rule <code>visibility: hidden</code> applied to it.</p>
-
-      <p><em>Note: refreshing the page resets it to it's origional state, so Charmander reappears.</em>
       </p>
-
       <h3>Practice: I choose you, Pikachu!</h3>
       <p>Let's put Pikachu in the pokéball next! Select Pikachu based on his <code>id</code>, "pikachu", and change his <code>class</code> to "caught".</p>
-
       <p>
         <details><summary>Example solution</summary>
           <pre class="code-block">
@@ -106,31 +89,27 @@ pika.className = "caught";</code>
           </pre>
         </details>
       </p>
-
     </section>
-
     <section>
       <h3>Capturing User Input</h3>
-      <p>We've just learned how we can manipulate HTML by writing JavaScript in the console. Let's now learn how to capture a user's input using something called a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" target="_blank">prompt</a>.
-
-      <p>Great! Now let's prompt the user for some input and see the result displayed in the console. See what the code below does by clicking on the "Execute" button.</p>
+      <p>We've just learned how we can capture Pokeémon by writing JavaScript that manipulates our HTML. Let's now learn how to capture a user's input in JavaScript using a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" target="_blank">prompt</a>.
+      <p>Great! Now let's prompt the user for some input and see the result <b>displayed in the console</b>. See what the code below does by clicking on the "Execute" button.</p>
       <pre class="code-block">
         <code class="language-javascript">var sentiment = prompt("How are you feeling today?");
 console.log("Today you are", sentiment);</code>
 <button class="execCode">Execute</button>
       </pre>
-
+      <p><em>Note: <a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Outputting_text_to_the_console" target="_blank"><code>console.log()</code></a> is just a simple way to print something to the console.</em></p>
       <p>Try clicking the above button. It should produce a prompt message that will display what it's input to the console as output.</p>
-
-      <p>Note: <a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Outputting_text_to_the_console" target="_blank"><code>console.log()</code></a> is just a simple way to print something to the console.</p>
-
       <h3>Practice: Breakfast Prompt</h3>
       <p>Edit the code in the box below to prompt the user with the message "What did you eat for breakfast this morning?". Display the user's response in the console in the format, "You ate oatmeal for breakfast", if they answered "oatmeal". Click the button "Execute" to test out the code.</p>
       <pre class="code-block">
-        <code class="language-javascript" contenteditable>var food = prompt("...");
+        <code class="language-javascript editable" contenteditable>//edit me
+var food = prompt("...");
 console.log("...");</code>
 <button class="execCode">Execute</button>
       </pre>
+      <p><em>Note: Anything written after <code>//</code> in JavaScript is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Comments" target="_blank">comment</a></em></p>
       <p>
         <details><summary>Example solution:</summary>
           <pre class="code-block">
@@ -140,30 +119,33 @@ console.log("You ate", food, "for breakfast");</code>
         </details>
       </p>
     </section>
-
     <section>
-      <h3>Changing the inner HTML of an element to display an output to the user</h3>
+      <h3>User Output</h3>
       <p>Now that we can get user input and select elements on a page, we can think about how to display a user's input back to them! We'll have to change what's inside of an HTML element first by selecting it, then setting its <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank"><code>innerHTML</code></a> to anything we want. Let's do this to update the text below in order to reflect something we've learned today.</p>
-
       <h5 class="user-output">Today I learned: <span id="new-knowledge">...</span></h5>
-
       <p>The elipse above is wrapped in an HTML <code>span</code> tag that has the <code>id</code> "new-knowledge". Knowing this, we should be able to easily select it. Thereafter, we can change what's inside of it to reflect something we've learned. Let's see an example of how this will work.</p>
-
       <p>
         <pre class="code-block">
             <code class="language-javascript">var newKnowledge = document.getElementById("new-knowledge");
 newKnowledge.innerHTML = "how to select and manipulate DOM elements!"</code>
+<button class="execCode">Execute</button>
         </pre>
       </p>
-
       <h3>Practice: All together now!</h3>
       <p>Let's prompt the user for their favorite pokémon and display it back to them on the site! First, prompt the user for their favorite pokemon and store the input in a variable. Then select the text below using the <code>id</code> "favorite-pokemon" and change the element's inner HTML to display the favorite pokémon!</p>
 
       <h5 class="user-output">My favorite pokémon is: <span id="favorite-pokemon">...</span></h5>
+      <pre class="code-block">
+        <code class="language-javascript editable" contenteditable>// use a prompt to get the user's favorite pokemon &amp save it to a variable
 
-      <p><em>Note: synthesizing new knowledge is always challenging, so try your best, but be encouraged to look at the example solution below thereafter.</em></p>
+// select the element with the id "favorite-pokemon" &amp save it to a variable
 
+// set the inner html of the element to the user's favorite pokemon</code>
+
+<button class="execCode">Execute</button>
+      </pre>
       <p>
+      <p><em>Note: synthesizing new knowledge is always challenging, so try your best, but be encouraged to look at the example solution below thereafter.</em></p>
         <details><summary>Example solution</summary>
           <pre class="code-block">
             <code class="language-javascript">var favPokemonInput = prompt("What is your favorite pokemon?");
@@ -173,11 +155,8 @@ favPokemonElement.innerHTML = favPokemonInput;</code>
         </details>
       </p>
     </section>
-
 <hr class="divider"/>
-
     <h3>Challenges</h3>
-
     <section id="exercise-1">
       <h4 class="challenge">First Challenge</h4>
       <p>Edit the function <code>app.setName()</code> in the file <b>assets/js/app.js</b> such that a prompt is given to the user. Select the element with id "first-name" and set its inner HTML to the input received from the user.</p>
