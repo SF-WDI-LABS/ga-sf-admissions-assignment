@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
   <!-- scripts -->
   <script type="text/javascript" src="vendor/js/prism.js"></script>
-  <script type="text/javascript" src="vendor/js/exec.js"></script>
+  <script type="text/javascript" src="vendor/js/live-code.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
   <!-- favicon -->
   <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
@@ -81,7 +81,7 @@
       </p>
 
       <p>In the JavaScript console try selecting Charmander and removing him (putting him into our pokéball) with the following command:
-      <pre>
+      <pre class="code-block">
         <code class="language-javascript">var charmander = document.getElementById("charmander");
 charmander.remove();</code>
       </pre>
@@ -95,7 +95,7 @@ charmander.remove();</code>
 
       <p>
         <details><summary>Example solution</summary>
-          <pre>
+          <pre class="code-block">
             <code class="language-javascript">var pika = document.getElementById("pikachu");
 pika.remove();</code>
           </pre>
@@ -116,7 +116,7 @@ pika.remove();</code>
       <p>As mentioned previously, we're going to write some Javascript code to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" target="_blank">prompt</a> our user.
 
       <p>Now we're ready to write our prompt message! In the console type:</p>
-      <pre>
+      <pre class="code-block">
         <code class="language-javascript">var language = "javascript";
 function code(lang) {
   return "let's code some " + lang + "!";
@@ -127,10 +127,10 @@ code(language);</code>
       <img src="assets/imgs/javascript-console.png" alt="JS Console" class="example-image">
 
       <p>Great! Now let's prompt the user for some input and see the result displayed in the console. Execute the code below by clicking on the button.</p>
-      <pre>
+      <pre class="code-block">
         <code class="language-javascript">var sentiment = prompt("How are you feeling today?");
 console.log("Today you are", sentiment);</code>
-<button onclick="exec.runCode(this)">Execute this code</button>
+<button class="execCode">Execute this code</button>
       </pre>
 
       <p>Try clicking the above button. It should produce a prompt message that will display what it's input to the console as output.</p>
@@ -139,14 +139,14 @@ console.log("Today you are", sentiment);</code>
 
       <h3>Practice: Breakfast Prompt</h3>
       <p>Edit the code below to prompt the user with a message "What did you eat for breakfast this morning?" and display their answer to the console. For example, if the user answered "oatmeal", display "You ate oatmeal for breakfast." When you are done click the button "Execute this code" and see the output in the console.</p>
-      <pre>
+      <pre class="code-block">
         <code class="language-javascript" contenteditable>var food = prompt("...");
 console.log("...");</code>
-<button onclick="exec.runCode(this)">Execute this code</button>
+<button class="execCode">Execute this code</button>
       </pre>
       <p>
         <details><summary>Example solution:</summary>
-          <pre>
+          <pre class="code-block">
             <code class="language-javascript">var food = prompt("What did you eat for breakfast this morning?");
 console.log("You ate", food, "for breakfast");</code>
           </pre>
@@ -163,7 +163,7 @@ console.log("You ate", food, "for breakfast");</code>
       <p>The elipse above is wrapped in an HTML <code>span</code> tag that has the <code>id</code> "new-knowledge". Knowing this, we should be able to easily select it. Thereafter, we can change what's inside of it to reflect something we've learned. Let's see an example of how this will work.</p>
 
       <p>
-        <pre>
+        <pre class="code-block">
             <code class="language-javascript">var newKnowledge = document.getElementById("new-knowledge");
 newKnowledge.innerHTML = "how to select and manipulate DOM elements!"</code>
         </pre>
@@ -178,7 +178,7 @@ newKnowledge.innerHTML = "how to select and manipulate DOM elements!"</code>
 
       <p>
         <details><summary>Example solution</summary>
-          <pre>
+          <pre class="code-block">
             <code class="language-javascript">var favPokemonInput = prompt("What is your favorite pokemon?");
 var favPokemonElement = document.getElementById("favorite-pokemon");
 favPokemonElement.innerHTML = favPokemonInput;</code>
@@ -237,5 +237,17 @@ favPokemonElement.innerHTML = favPokemonInput;</code>
     </section> -->
     <footer>©2016 General Assembly. All rights reserved.</footer>
   </div>
+  <script type="text/javascript">
+    //*** Set Appropriate Event Listeners ***//
+    const codeBlocks = document.querySelectorAll(".code-block");
+    codeBlocks.forEach(function(codeBlock) {
+      let execCodeBtn;
+      let code = codeBlock.querySelector("code");
+      code.addEventListener("keyup", liveCode.reHighlight); // dynamic syntax highlighting
+      if(execCodeBtn = codeBlock.querySelector(".execCode")) { // ensure code block has execute button
+        execCodeBtn.addEventListener("click", liveCode.runCode)
+      }
+    });
+  </script>
 </body>
 </html>
