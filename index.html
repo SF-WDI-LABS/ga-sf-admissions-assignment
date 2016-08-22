@@ -25,6 +25,9 @@
   <div id="page-wrapper">
 
     <header>
+      <div id="ga-logo">
+        <img id="ga-logo" src="assets/imgs/ga-logo.png">
+      </div>
       <h1>Web Input &amp Output</h1>
     </header>
 
@@ -89,7 +92,7 @@ charmander.remove();</code>
 
       <h3>Practice: I choose you, Pikachu!</h3>
       <p>Let's put Pikachu in the pokéball next! Select Pikachu based on his <code>id</code>, "pikachu", and remove him from the page.</p>
-      
+
       <p>
         <details><summary>Example solution</summary>
           <pre>
@@ -122,18 +125,18 @@ code(language);</code>
       </pre>
       <p>At this point your screen should like something like this, and don't worry if the console is at the bottom or the side of the window.</p>
       <img src="assets/imgs/javascript-console.png" alt="JS Console" class="example-image">
-      
+
       <p>Great! Now let's prompt the user for some input and see the result displayed in the console. Execute the code below by clicking on the button.</p>
       <pre>
         <code class="language-javascript">var sentiment = prompt("How are you feeling today?");
 console.log("Today you are", sentiment);</code>
 <button onclick="exec.runCode(this)">Execute this code</button>
       </pre>
-      
+
       <p>Try clicking the above button. It should produce a prompt message that will display what it's input to the console as output.</p>
-      
-      <p>Note: <a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Outputting_text_to_the_console" target="_blank"><code>console.log()</code></a> is just a simple way to print something to the console.</p> 
-      
+
+      <p>Note: <a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Outputting_text_to_the_console" target="_blank"><code>console.log()</code></a> is just a simple way to print something to the console.</p>
+
       <h3>Practice: Breakfast Prompt</h3>
       <p>Edit the code below to prompt the user with a message "What did you eat for breakfast this morning?" and display their answer to the console. For example, if the user answered "oatmeal", display "You ate oatmeal for breakfast." When you are done click the button "Execute this code" and see the output in the console.</p>
       <pre>
@@ -156,7 +159,7 @@ console.log("You ate", food, "for breakfast");</code>
       <p>Now that we can get user input and select elements on a page, we can think about how to display a user's input back to them! We'll have to change what's inside of an HTML element first by selecting it, then setting its <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank"><code>innerHTML</code></a> to anything we want. Let's do this to update the text below in order to reflect something we've learned today.</p>
 
       <h5 class="user-output">Today I learned: <span id="new-knowledge">...</span></h5>
-  
+
       <p>The elipse above is wrapped in an HTML <code>span</code> tag that has the <code>id</code> "new-knowledge". Knowing this, we should be able to easily select it. Thereafter, we can change what's inside of it to reflect something we've learned. Let's see an example of how this will work.</p>
 
       <p>
@@ -165,12 +168,12 @@ console.log("You ate", food, "for breakfast");</code>
 newKnowledge.innerHTML = "how to select and manipulate DOM elements!"</code>
         </pre>
       </p>
-      
+
       <h3>Practice: All together now!</h3>
       <p>Let's prompt the user for their favorite pokémon and display it back to them on the site! First, prompt the user for their favorite pokemon and store the input in a variable. Then select the text below using the <code>id</code> "favorite-pokemon" and change the element's inner HTML to display the favorite pokémon!</p>
 
       <h5 class="user-output">My favorite pokémon is: <span id="favorite-pokemon">...</span></h5>
-      
+
       <p><em>Note: synthesizing new knowledge is always challenging, so try your best, but be encouraged to look at the example solution below thereafter.</em></p>
 
       <p>
@@ -182,7 +185,7 @@ favPokemonElement.innerHTML = favPokemonInput;</code>
           </pre>
         </details>
       </p>
-    </section> 
+    </section>
 
 <hr class="divider"/>
 
@@ -216,7 +219,7 @@ favPokemonElement.innerHTML = favPokemonInput;</code>
     <section>
       <p><em>Feedback for this sample lesson? Send an email to <a href="mailto:ilias@ga.co">one of the creators</a>.</em></p>
     </section>
-<!-- 
+<!--
     <section id="exercise-2">
       <h4 class="challenge">Second Challenge</h4>
       <div class="content">
