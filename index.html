@@ -167,22 +167,22 @@ favPokemonElement.innerHTML = favPokemonInput;</code>
     <section id="exercise-1">
       <h4 class="challenge">First Challenge</h4>
       <p></p>
-      <button class="button-primary" onclick=app.setName()>Shake Pokeball?</button>
       <h5 class="user-output">Hello there! My name is <span id="first-name">...</span></h5>
+      <button class="button-primary" onclick=app.setName()>Shake Pokeball</button>
     </section>
     <section id="exercise-2">
       <h4 class="challenge">Second Challenge</h4>
       <p>Edit the function <code>app.setName()</code> such that a prompt is given to the user. Select the element with id "first-name" and set its inner HTML to the input received from the user.</p>
       <p><em>Note: Clicking this button will execute the function <code>app.setName()</code></em></span></p>
-      <button class="button-primary" onclick=app.setName()>Set Name</button>
       <h5 class="user-output">Hello there! My name is <span id="first-name">...</span></h5>
+      <button class="button-primary" onclick=app.setName()>Set Name</button>
     </section>
     <section id="exercise-3">
       <h4 class="challenge">Third Challenge</h4>
       <p>Now we're going to prompt the user for their favorite website! Similar to above, edit the function <code>app.setWebsite</code> to prompt the user for their input and use it to set the inner HTML of the element with id "favorite-website".
       <p><em>Note: For now, just display the website's link as text.</code></em></span></p>
-      <button class="button-primary" onclick=app.setWebsite()>Set Website</button>
       <h5 class="user-output">My favorite website is <span id="favorite-website">...</span></h5>
+      <button class="button-primary" onclick=app.setWebsite()>Set Website</button>
     </section>
     <section id="exercise-4">
       <h4 class="challenge">Bonus Challenge</h4>
@@ -192,33 +192,17 @@ favPokemonElement.innerHTML = favPokemonInput;</code>
     <section>
       <p><em>Feedback for this sample lesson? Send an email to <a href="mailto:ilias@ga.co">one of the creators</a>.</em></p>
     </section>
-<!--
-    <section id="exercise-2">
-      <h4 class="challenge">Second Challenge</h4>
-      <div class="content">
-        My favorite hobby is <span id="hobby">...</span>
-      </div>
-      <button class="button-primary" onclick=app.setHobby()>Set Hobby</button>
-    </section>
-
-    <section id="exercise-3">
-      <h4 class="challenge">Third Challenge</h4>
-      <div class="content">
-        My favorite website is <span id="website">...</span>
-      </div>
-      <button class="button-primary" onclick=app.setWebsite()>Set Website</button>
-    </section> -->
     <footer>©2016 General Assembly. All rights reserved.</footer>
   </div>
   <script type="text/javascript">
     //*** Set Appropriate Event Listeners ***//
     const codeBlocks = document.querySelectorAll(".code-block");
     codeBlocks.forEach(function(codeBlock) {
-      let execCodeBtn;
-      let code = codeBlock.querySelector("code");
+      const code = codeBlock.querySelector("code");
+      const execCodeBtn = codeBlock.querySelector(".execCode");
       code.addEventListener("keyup", liveCode.reHighlight); // dynamic syntax highlighting
-      if(execCodeBtn = codeBlock.querySelector(".execCode")) { // ensure code block has execute button
-        execCodeBtn.addEventListener("click", liveCode.runCode)
+      if(execCodeBtn) { // ensure code block has execute button
+        execCodeBtn.addEventListener("click", liveCode.runCode);
       }
     });
   </script>
