@@ -70,7 +70,7 @@
       <pre class="code-block">
         <code class="language-javascript">var charmander = document.getElementById("charmander");
 charmander.className = "caught";</code>
-<button class="execCode">Execute</button>
+<button class="exec-code button-primary">Execute</button>
       </pre>
       <p><em>Note: refreshing the page sets it to it's origional state, making Charmander reappear.</em>
       <p>How does this code make Charmander disappear? We targeted the Charmander <code>img</code> element and added the class, <code>caught</code>. This class has the CSS rule <code>opacity: 0</code> applied to it, making the element transparent.</p>
@@ -82,14 +82,14 @@ charmander.className = "caught";</code>
 // change the element's class to "caught"
 
 </code>
-<button class="execCode">Execute</button>
+<button class="exec-code button-primary">Execute</button>
       </pre>
       <p><em>Note: If you want to create a line break inside the code block, press <kbd>Shift</kdb> + <kbd>Enter</kbd></em></p>
         <details><summary>Example solution</summary>
           <pre class="code-block">
             <code class="language-javascript">var pika = document.getElementById("pikachu");
 pika.className = "caught";</code>
-<button class="execCode">Execute</button>
+<button class="exec-code button-primary">Execute</button>
           </pre>
         </details>
         <br>
@@ -105,7 +105,7 @@ pika.className = "caught";</code>
       <pre class="code-block">
         <code class="language-javascript">var sentiment = prompt("How are you feeling today?");
 console.log("Today you are", sentiment);</code>
-<button class="execCode">Execute</button>
+<button class="exec-code button-primary">Execute</button>
       </pre>
       <p><em>Note: <a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Outputting_text_to_the_console" target="_blank"><code>console.log()</code></a> is just a simple way to print something to the console.</em></p>
       <p>Try clicking the above button. It should produce a prompt message that will display what it's input to the console as output.</p>
@@ -114,13 +114,13 @@ console.log("Today you are", sentiment);</code>
       <pre class="code-block">
         <code class="language-javascript editable" contenteditable spellcheck="false">var food = prompt("...");
 console.log("...");</code>
-<button class="execCode">Execute</button>
+<button class="exec-code button-primary">Execute</button>
       </pre>
         <details><summary>Example solution:</summary>
           <pre class="code-block">
             <code class="language-javascript">var food = prompt("What did you eat for breakfast this morning?");
 console.log("You ate", food, "for breakfast");</code>
-<button class="execCode">Execute</button>
+<button class="exec-code button-primary">Execute</button>
           </pre>
         </details>
         <br>
@@ -134,7 +134,7 @@ console.log("You ate", food, "for breakfast");</code>
         <pre class="code-block">
             <code class="language-javascript">var newKnowledge = document.getElementById("new-knowledge");
 newKnowledge.innerHTML = "how to select and manipulate DOM elements!"</code>
-<button class="execCode">Execute</button>
+<button class="exec-code button-primary">Execute</button>
         </pre>
       </p>
       <h4>Practice: All together now!</h4>
@@ -148,7 +148,7 @@ newKnowledge.innerHTML = "how to select and manipulate DOM elements!"</code>
 
 // set the inner html of the element to the user's favorite pokemon</code>
 
-<button class="execCode">Execute</button>
+<button class="exec-code button-primary">Execute</button>
       </pre>
       <p><em>Note: synthesizing new knowledge is always challenging, so try your best, but be encouraged to look at the example solution below thereafter.</em></p>
         <details><summary>Example solution</summary>
@@ -199,10 +199,10 @@ favPokemonElement.innerHTML = favPokemonInput;</code>
     const codeBlocks = document.querySelectorAll(".code-block");
     codeBlocks.forEach(function(codeBlock) {
       const code = codeBlock.querySelector("code");
-      const execCodeBtn = codeBlock.querySelector(".execCode");
+      const exec-codeBtn = codeBlock.querySelector(".exec-code");
       code.addEventListener("keyup", liveCode.reHighlight); // dynamic syntax highlighting
-      if(execCodeBtn) { // ensure code block has execute button
-        execCodeBtn.addEventListener("click", liveCode.runCode);
+      if(exec-codeBtn) { // ensure code block has execute button
+        exec-codeBtn.addEventListener("click", liveCode.runCode);
       }
     });
   </script>
