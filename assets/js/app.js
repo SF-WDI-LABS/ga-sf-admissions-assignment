@@ -6,7 +6,7 @@ var app = new Object();
 
 app.shakePokeball = function shakePokeball() {
   // code BELOW this line for challenge #1 -->
-
+  
 } // <-- code ABOVE this line for challenge #1
 
 app.setName = function setName() {
