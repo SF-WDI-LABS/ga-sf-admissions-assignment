@@ -162,31 +162,30 @@ favPokemonElement.innerHTML = favPokemonInput;</code>
 <hr class="divider"/>
     <h3>Challenges</h3>
     <section id="intro-challenges">
-      <p>Instructions: For each challenges below, work in the JavaScript file at the relative path, <b>assets/js/app.js</b>. A text editor will be required to view and make changes to that file. <a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a> and <a href="https://atom.io/" target="_blank">Atom</a> are mostly commonly used by web developers, but feel free to use whatever you like or is easiest.</p>
+      <p><b>Instructions:</b> For each challenges below, work in the JavaScript file at the relative path, <kbd>assets/js/app.js</kbd>. This working file will be submitted to General Assembly Admissions. In order to view and make changes to the working file, a text editor will be required. <a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a> and <a href="https://atom.io/" target="_blank">Atom</a> are mostly commonly used by web developers, but feel free to use whatever you like or is easiest.</p>
+      <p><b>Important:</b> each time you edit and save the working file you must refresh the HTML page to load the changes into into it. To execute the code, click the button that corresponds to the challenge being worked on. Find any error messages in the JavaScript console.</p>
     </section>
     <section id="exercise-1">
       <h4 class="challenge">First Challenge</h4>
-      <p>Add the <code>class</code> "shake" to the element with <code>id</code> "pokeball".</p>
-      <h5 class="user-output">Hello there! My name is <span id="first-name">...</span></h5>
-      <button class="button-primary" onclick=app.setName()>Shake Pokeball</button>
+      <p>Inside the function <code>shakePokeball</code>, add the <code>class</code> "shake" to the element with <code>id</code> "pokeball", then click the button "Shake Pokeball".</p>
+      <img id="pokeball" src="assets/imgs/pokeball.png">
+      <button class="button-primary" onclick=app.shakePokeball()>Shake Pokeball</button>
     </section>
     <section id="exercise-2">
       <h4 class="challenge">Second Challenge</h4>
-      <p>Edit the function <code>app.setName()</code> such that a prompt is given to the user. Select the element with id "first-name" and set its inner HTML to the input received from the user.</p>
-      <p><em>Note: Clicking this button will execute the function <code>app.setName()</code></em></span></p>
+      <p>Inside the function <code>setName</code>, prompt is given to the user to find out what their name is. Select the element with id "first-name" and set its inner HTML to the input received from the user.</p>
       <h5 class="user-output">Hello there! My name is <span id="first-name">...</span></h5>
       <button class="button-primary" onclick=app.setName()>Set Name</button>
     </section>
     <section id="exercise-3">
       <h4 class="challenge">Third Challenge</h4>
-      <p>Now we're going to prompt the user for their favorite website! Similar to above, edit the function <code>app.setWebsite</code> to prompt the user for their input and use it to set the inner HTML of the element with id "favorite-website".
-      <p><em>Note: For now, just display the website's link as text.</code></em></span></p>
+      <p>Inside the function <code>setWebsite</code>, prompt the user for their favorite website and use it to set the inner HTML of the element with id "favorite-website". Display the website as plain text rather than a link.
       <h5 class="user-output">My favorite website is <span id="favorite-website">...</span></h5>
       <button class="button-primary" onclick=app.setWebsite()>Set Website</button>
     </section>
     <section id="exercise-4">
       <h4 class="challenge">Bonus Challenge</h4>
-      <p>Let's refactor the <code>app.setWebsite</code> function in order for it to not just render the website as text, but to render it as a clickable <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">anchor</a> element with the <code>href</code> set to the URL of the user's favorite website they're prompted for and the display text of the anchor element just set to "click me!".</p>
+      <p>Refactor the <code>setWebsite</code> function in order for it to not just render the website as text, but to render it as a clickable <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">anchor</a> element with the <code>href</code> set to the URL of the user's favorite website they're prompted for and the display text of the anchor element set to "find out here!".</p>
       <p><em>Hint: Don't forget to add <code>http://</code> to the beginning of the site URL if you want the link to work!</em></span></p>
     </section>
     <section>
@@ -199,10 +198,10 @@ favPokemonElement.innerHTML = favPokemonInput;</code>
     const codeBlocks = document.querySelectorAll(".code-block");
     codeBlocks.forEach(function(codeBlock) {
       const code = codeBlock.querySelector("code");
-      const exec-codeBtn = codeBlock.querySelector(".exec-code");
+      const execCodeBtn = codeBlock.querySelector(".exec-code");
       code.addEventListener("keyup", liveCode.reHighlight); // dynamic syntax highlighting
-      if(exec-codeBtn) { // ensure code block has execute button
-        exec-codeBtn.addEventListener("click", liveCode.runCode);
+      if(execCodeBtn) { // ensure code block has execute button
+        execCodeBtn.addEventListener("click", liveCode.runCode);
       }
     });
   </script>
