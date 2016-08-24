@@ -1,4 +1,4 @@
-#GA SF Admissions Assessment
+#GA SF Admissions Assignment
 
 ## Setup
 
