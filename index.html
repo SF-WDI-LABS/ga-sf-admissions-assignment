@@ -39,9 +39,9 @@
       <h4>What are the objectives?</h4>
       <p><em>After this workshop, developers will be able to:</em></p>
       <ul>
-        <li>Change an element's CSS class using JavaScript</li>
-        <li>Capture User Input</li>
-        <li>Display an output to the user on the page</li>
+        <li><a href="#lo-1">Change an element's CSS class using JavaScript</a></li>
+        <li><a href="#lo-2">Capture User Input</a></li>
+        <li><a href="#lo-3">Display an output to the user on the page</a></li>
       </ul>
       <h4>Where should we be now?</h4>
       <p><em><b>Before continuing</b>, you should already be able to...:</em></p>
@@ -55,8 +55,9 @@
         <input type="checkbox"> Execute commands in Chrome's <a href="https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en" target="_blank">JavaScript Console</a><br>
       </ul>
     </section>
+    <!-- introduction -->
     <section>
-      <h3>Objective 1: Changing an element's CSS class using JavaScript</h3>
+      <h3 id="lo-1">Objective 1: Changing an element's CSS class using JavaScript</h3>
       <p>An <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">HTML element</a> is made up of two HTML tags that enclose inner content.</p>
       <img src="assets/imgs/anatomy-of-an-html-element.png" alt="anatomy of an html element" />
       <p>If you navigate to <a href="http://example.com/" target="_blank">example.com</a>, the text "Example Domain" is contained within a <code>h1</code> element. See for yourself, by right clicking on that text, to open a context menu, and selecting the option <kbd>Inspect</kbd>.</p>
@@ -98,7 +99,7 @@ pika.className = "caught";</code>
         <br>
     </section>
     <section>
-      <h3>Objective 2: Capturing User Input</h3>
+      <h3 id="lo-2">Objective 2: Capturing User Input</h3>
       <p>We've just learned how we can capture Pokémon by writing JavaScript that manipulates our HTML. Let's now learn how to capture a user's input in JavaScript using a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" target="_blank">prompt</a>.
       <p>Great! Now let's prompt the user for some input and see the result <b>displayed in the console</b>.</p>
       <pre class="code-block">
@@ -125,7 +126,7 @@ console.log("You ate", food, "for breakfast");</code>
         <br>
     </section>
     <section>
-      <h3>Objective 3: User Output</h3>
+      <h3 id="lo-3">Objective 3: User Output</h3>
       <p>Now that we can get user input and select elements on a page, we can think about how to display a user's input back to them! We'll have to change what's inside of an HTML element first by selecting it, then setting its <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank"><code>innerHTML</code></a> to anything we want. Let's do this to update the text below in order to reflect something we've learned today.</p>
       <h5 class="user-output">Today I learned: <span id="new-knowledge">...</span></h5>
       <p>The elipse above is wrapped in an HTML <code>span</code> tag that has the <code>id</code> "new-knowledge". Knowing this, we should be able to easily select it. Thereafter, we can change what's inside of it to reflect something we've learned. Let's see an example of how this will work.</p>
