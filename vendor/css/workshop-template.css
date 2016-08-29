@@ -1,5 +1,10 @@
 /* Lesson Template */
 
+#assignment-instructions {
+	background: #f6f6f6;
+    padding: 2em;
+}
+
 #ga-logo {
 		text-align: center;
 }
@@ -102,5 +107,5 @@ pre > code[class*="language-"], pre[class*="language-"] {
 	white-space: pre;
 	background-color: transparent;
 	margin-top: -1em;
-  margin-bottom: -1em;
+  	margin-bottom: -1em;
 }
