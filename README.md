@@ -1,6 +1,5 @@
 #GA SF Admissions Assignment
 
-## Setup
+This is the admission assignment for General Assembly in San Francisco. Open the `index.html` file to get started.
 
-* Clone down this repo
-* Open `index.html`
+For issues or feedback contact [ilias@ga.co](mailto: ilias@ga.co).
