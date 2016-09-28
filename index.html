@@ -88,8 +88,8 @@ charmander.className = "caught";</code>
       <p>How does this code make Charmander disappear? We targeted the Charmander <code>img</code> element and added the class, <code>caught</code>. This class has the CSS rule <code>opacity: 0</code> applied to it, making the element transparent.</p>
       <h4>Practice: I choose you, Pikachu!</h4>
       <p><b>Edit the code below</b> to catch Pikachu next! It will be helpful to understand that anything written after <code>//</code> in JavaScript is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Comments" target="_blank">comment</a></em>. Write code below the corresponding comment. Select Pikachu based on his <code>id</code>, "pikachu", and change his <code>class</code> to "caught".</p>
-      <pre class="code-block">
-        <code class="language-javascript editable" contenteditable spellcheck="false">// select the element with the `id` Pikachu and save it to a variable
+      <pre class="code-block editable">
+        <code class="language-javascript" contenteditable spellcheck="false">// select the element with the `id` Pikachu and save it to a variable
 
 // change the element's class to "caught"
 
@@ -119,8 +119,8 @@ console.log("Today you are", sentiment);</code>
       <p>Try clicking the above button. It should produce a prompt message that will display what it's input to the console as output.</p>
       <h4>Practice: Breakfast Prompt</h4>
       <p><b>Edit the code below</b> to prompt the user with the message "What did you eat for breakfast this morning?". Display the user's response in the console in the format, "You ate oatmeal for breakfast", if they answered "oatmeal". Click the button "Execute" to test out the code.</p>
-      <pre class="code-block">
-        <code class="language-javascript editable" contenteditable spellcheck="false">var food = prompt("...");
+      <pre class="code-block editable">
+        <code class="language-javascript" contenteditable spellcheck="false">var food = prompt("...");
 console.log("...");</code>
 <button class="exec-code button-primary">Execute</button>
       </pre>
@@ -149,8 +149,8 @@ newKnowledge.innerHTML = "how to select and manipulate DOM elements!"</code>
       <p>Let's prompt the user for their favorite pokémon and display it back to them on the site! First, prompt the user for their favorite pokemon and store the input in a variable. Then select the text below using the <code>id</code> "favorite-pokemon" and change the element's inner HTML to display the favorite pokémon!</p>
 
       <h5 class="user-output">My favorite pokémon is: <span id="favorite-pokemon">...</span></h5>
-      <pre class="code-block">
-        <code class="language-javascript editable" contenteditable spellcheck="false">// use a prompt to get the user's favorite pokemon and save it to a variable
+      <pre class="code-block editable">
+        <code class="language-javascript" contenteditable spellcheck="false">// use a prompt to get the user's favorite pokemon and save it to a variable
 
 // select the element with the id "favorite-pokemon" and save it to a variable
 
@@ -205,16 +205,7 @@ favPokemonElement.innerHTML = favPokemonInput;</code>
     <footer>©2016 General Assembly. All rights reserved.</footer>
   </div>
   <script type="text/javascript">
-    //*** Set Appropriate Event Listeners ***//
-    const codeBlocks = document.querySelectorAll(".code-block");
-    codeBlocks.forEach(function(codeBlock) {
-      const code = codeBlock.querySelector("code");
-      const execCodeBtn = codeBlock.querySelector(".exec-code");
-      code.addEventListener("keyup", liveCode.reHighlight); // dynamic syntax highlighting
-      if(execCodeBtn) { // ensure code block has execute button
-        execCodeBtn.addEventListener("click", liveCode.runCode);
-      }
-    });
+    liveCode.init();
   </script>
 </body>
 </html>
