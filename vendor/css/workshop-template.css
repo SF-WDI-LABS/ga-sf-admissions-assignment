@@ -21,6 +21,21 @@
 	font-size: 18px;
 }
 
+#notification {
+	position: fixed;
+	z-index: 101;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #fde073;
+	text-align: center;
+	line-height: 2.5;
+	overflow: hidden;
+	-webkit-box-shadow: 0 0 5px black;
+	-moz-box-shadow: 0 0 5px black;
+	box-shadow: 0 0 5px black;
+}
+
 @media (max-width: 500px) {
 	#page-wrapper {
 		font-size: 14px;
@@ -55,6 +70,10 @@
 #pokemon > img {
 	height: 150px;
 	transition: all 0.5s ease;
+}
+
+.hide {
+	visibility: hidden;
 }
 
 .user-output {
