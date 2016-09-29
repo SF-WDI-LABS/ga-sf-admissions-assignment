@@ -45,7 +45,7 @@ liveCode.reHighlight = function reHighlight(e) {
   const html = Prism.highlight(code, Prism.languages.javascript);
   this.innerHTML = html; // update highlighting
   $(target).caret("pos", charPos); // set to original cursor position
-  if (e.which === 13) { // handle carriage return
+  if (e.which === 13 && !e.shiftKey) { // handle carriage return
     self.handleCarriageReturn();
   }
 }
