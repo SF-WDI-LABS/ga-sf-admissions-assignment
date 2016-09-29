@@ -2,11 +2,11 @@
 
 #assignment-instructions {
 	background: #f6f6f6;
-    padding: 2em;
+  padding: 2em;
 }
 
 #ga-logo {
-		text-align: center;
+	text-align: center;
 }
 
 #ga-logo > img {
@@ -19,21 +19,6 @@
 	padding: 2em;
 	color: #000;
 	font-size: 18px;
-}
-
-#notification {
-	position: fixed;
-	z-index: 101;
-	top: 0;
-	left: 0;
-	right: 0;
-	background: #fde073;
-	text-align: center;
-	line-height: 2.5;
-	overflow: hidden;
-	-webkit-box-shadow: 0 0 5px black;
-	-moz-box-shadow: 0 0 5px black;
-	box-shadow: 0 0 5px black;
 }
 
 @media (max-width: 500px) {
@@ -74,6 +59,28 @@
 
 .hide {
 	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.notification-container {
+	position: fixed;
+	z-index: 1;
+	opacity: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #fbd334;
+	text-align: center;
+	line-height: 2.5;
+	overflow: hidden;
+	-webkit-box-shadow: 0 0 5px black;
+	-moz-box-shadow: 0 0 5px black;
+	box-shadow: 0 0 5px black;
+}
+
+.notification {
+	margin: 0;
 }
 
 .user-output {
