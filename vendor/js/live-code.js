@@ -1,8 +1,9 @@
 const liveCode = new Object();
 
 liveCode.init = function init() {
-  /* Set event listeners */
   const self = liveCode;
+  self.notification = document.getElementById("notification");
+  /* Set event listeners */
   const codeBlocks = document.querySelectorAll(".code-block");
   codeBlocks.forEach(function(codeBlock) {
     const code = codeBlock.querySelector("code");
@@ -16,10 +17,12 @@ liveCode.init = function init() {
   });
 }
 
-liveCode.carriageReturnMsg = function carriageReturnMsg(e) {
-  if (e.which === 13) {
-    console.log("press shift + enter!");
-  }
+liveCode.handleCarriageReturn = function carriageReturnMsg() {
+  const self = liveCode;
+  self.notification.className = ""; // shows element (temp solution)
+  setTimeout(function() {
+    self.notification.className += "hide" // hides element
+  }, 2000)
 }
 
 liveCode.getCode = function getCode(context) {
@@ -42,5 +45,7 @@ liveCode.reHighlight = function reHighlight(e) {
   const html = Prism.highlight(code, Prism.languages.javascript);
   this.innerHTML = html; // update highlighting
   $(target).caret("pos", charPos); // set to original cursor position
-  self.carriageReturnMsg(e); // call at end to handle potential async side effect
+  if (e.which === 13) { // handle carriage return
+    self.handleCarriageReturn();
+  }
 }
