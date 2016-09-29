@@ -19,9 +19,9 @@ liveCode.init = function init() {
 
 liveCode.handleCarriageReturn = function carriageReturnMsg() {
   const self = liveCode;
-  self.notification.className = ""; // shows element (temp solution)
+  self.notification.className = "show"; // shows element (temp solution)
   setTimeout(function() {
-    self.notification.className += "hide" // hides element
+    self.notification.className = "hide" // hides element
   }, 2000)
 }
 
