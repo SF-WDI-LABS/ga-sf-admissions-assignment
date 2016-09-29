@@ -24,10 +24,10 @@
   <!-- favicon -->
   <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
 </head>
-<body>
+<body onload="liveCode.init()">
   <div id="page-wrapper">
-    <div class="notification-container" class="">
-      <h4 class="notification">Try '<kbd>SHIFT</kdb> + <kbd>ENTER</kdb>' for a line break...</h4>
+    <div id="notification" class="hide">
+      <h4 class="notification-content">Try '<kbd>SHIFT</kdb> + <kbd>ENTER</kdb>' for a line break...</h4>
     </div>
     <section id="assignment-instructions">
       <h2>Instructions</h2>
@@ -207,8 +207,5 @@ favPokemonElement.innerHTML = favPokemonInput;</code>
     </section>
     <footer>©2016 General Assembly. All rights reserved.</footer>
   </div>
-  <script type="text/javascript">
-    liveCode.init();
-  </script>
 </body>
 </html>
